@@ -1,0 +1,213 @@
+/* Imports
+----------------------------------------------------------------
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+/* Variables
+----------------------------------------------------------------
+*/
+
+:root {
+  /* colors: primary */
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  /* colors: neutral */
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue-1: hsl(210, 60%, 98%);
+  --very-light-grayish-blue-2: hsl(210, 63%, 94%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+/* Universal
+----------------------------------------------------------------
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--very-light-grayish-blue-1);
+  color: var(--dark-grayish-blue);
+}
+
+.heading-3 {
+  font-size: 24px;
+  color: var(--very-dark-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  background: none;
+}
+/* Content
+----------------------------------------------------------------
+*/
+
+.container {
+  max-width: 700px;
+  background: var(--white);
+  padding: 0 32px;
+  margin: 32px;
+}
+
+/* Topbar
+----------------------------------------------------------------
+*/
+
+.top-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.heading-3 span {
+  font-size: 16px;
+  border-radius: 4px;
+  background: var(--blue);
+  padding: 2px 12px;
+  color: var(--white);
+}
+
+.btn-read-all {
+  color: var(--dark-grayish-blue);
+  transition: all 0.3s;
+}
+
+.btn-read-all:hover {
+  color: var(--blue);
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+/* Notification
+----------------------------------------------------------------
+*/
+
+.notification {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.new {
+  background: var(--very-light-grayish-blue-1);
+}
+
+.new .notification-text::after {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  transform: translateY(-1px);
+}
+
+.avatar {
+  grid-row: 1 / -1;
+  height: 40px;
+  width: auto;
+}
+
+.notification-text {
+  color: var(--dark-grayish-blue);
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.author-name {
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  transition: all 0.3s;
+}
+
+.author-name:hover {
+  color: var(--blue);
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+.time {
+  grid-row: 2 / 3;
+  grid-column: 2 / -1;
+  color: var(--grayish-blue);
+  font-size: 14px;
+}
+
+.message {
+  grid-column: 3;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 8px;
+  transition: all 0.3s;
+}
+
+.message:hover {
+  background: var(--very-light-grayish-blue-2);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.comm-img {
+  grid-column: -1;
+  grid-row: 1/ -1;
+  height: 40px;
+}
+
+/* Notification variants
+----------------------------------------------------------------
+*/
+
+.reaction .notification-text span {
+  font-weight: 800;
+}
+
+.group .notification-text a:link,
+.group .notification-text a:visited {
+  color: var(--blue);
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+.group .notification-text a:hover,
+.group .notification-text a:active {
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+
+/* Media queries
+----------------------------------------------------------------
+*/
+
+@media screen and (max-width: 750px) {
+  body {
+    display: block;
+    background: var(--white);
+  }
+
+  .container {
+    margin: 0;
+  }
+}

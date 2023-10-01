@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h3 class="heading-3">Notifications <span>3</span></h3>
+        <button class="btn btn-read-all">Mark all as read</button>
+      </div>
+      <div class="notifications-box">
+        <!-- Notification #1 -->
+        <div class="notification new reaction">
+          <img src="assets/images/avatar-mark-webber.webp" class="avatar" />
+          <p class="notification-text">
+            <span class="author-name">Mark Webber&nbsp;</span>reacted to your
+            recent post <span>My first tournament today!</span>
+          </p>
+          <span class="time">1m ago</span>
+        </div>
+        <!-- Notification #2 -->
+        <div class="notification new">
+          <img src="assets/images/avatar-angela-gray.webp" class="avatar" />
+          <p class="notification-text">
+            <span class="author-name">Angela Gray&nbsp;</span>followed you
+          </p>
+          <span class="time">5m ago</span>
+        </div>
+        <!-- Notification #3 -->
+        <div class="notification new group">
+          <img src="assets/images/avatar-jacob-thompson.webp" class="avatar" />
+          <p class="notification-text">
+            <span class="author-name">Jacob Thompson&nbsp;</span>has joined your
+            group <a href="#">Chess Club</a>
+          </p>
+          <span class="time">1 day ago</span>
+        </div>
+        <!-- Notification #4 -->
+        <div class="notification">
+          <img
+            src="assets/images/avatar-rizky-hasanuddin.webp"
+            class="avatar"
+          />
+          <p class="notification-text">
+            <span class="author-name">Rizky Hasanuddin&nbsp;</span>sent you a
+            private message
+          </p>
+          <span class="time">5 days ago</span>
+          <div class="message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
+          </div>
+        </div>
+        <!-- Notification #5 -->
+        <div class="notification">
+          <img src="assets/images/avatar-kimberly-smith.webp" class="avatar" />
+          <p class="notification-text">
+            <span class="author-name">Kimberly Smith&nbsp;</span>scommented on
+            your picture
+          </p>
+          <span class="time">1 week ago</span>
+          <img
+            src="assets/images/image-chess.webp"
+            alt="Chess"
+            class="comm-img"
+          />
+        </div>
+        <!-- Notification #6 -->
+        <div class="notification reaction">
+          <img src="assets/images/avatar-nathan-peterson.webp" class="avatar" />
+          <p class="notification-text">
+            <span class="author-name">Nathan Peterson&nbsp;</span>reacted to
+            your recent post
+            <span>5 end-game strategies to increase your win rate</span>
+          </p>
+          <span class="time">2 weeks ago</span>
+        </div>
+        <!-- Notification #7 -->
+        <div class="notification group">
+          <img src="assets/images/avatar-anna-kim.webp" class="avatar" />
+          <p class="notification-text">
+            <span class="author-name">Anna Kim&nbsp;</span>left the group
+            <a href="#">Chess Club</a>
+          </p>
+          <span class="time">2 weeks ago</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
